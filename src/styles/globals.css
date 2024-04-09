@@ -6,6 +6,21 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  border: 1px solid rgba(144, 145, 160, 0.16);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +43,60 @@ body {
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    text-wrap: normal;
   }
 }
+
+.text_1 {
+  animation: text1;
+}
+.text_2 {
+  animation: text2;
+}
+.text_1, .text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s; /* Adjusted duration to make it faster */
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* Smooth timing function */
+  animation-iteration-count: infinite;
+}
+
+.text_1::after, .text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s; /* Adjusted duration for faster blinking */
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+
+  70%, 90% {
+    width: 29.3em;
+  }
+}
+
+@keyframes text1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  20%, 40% {
+    width: 25.3em;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
