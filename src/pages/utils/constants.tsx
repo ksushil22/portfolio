@@ -1,5 +1,5 @@
 import React from "react";
-import {cn} from "@/pages/utils/cn";
+import cn from "@/pages/utils/cn";
 
 export const Highlight = ({
                               children,
@@ -43,7 +43,7 @@ export const Heading = ({children}: {children: React.ReactNode}) => {
     return <h1 className={"text-2xl text-center font-bold"}>{children}</h1>
 };
 
-export const Duration = ({children}: {children: React.ReactNode}) => {
+const Duration = ({children}: {children: React.ReactNode}) => {
     return <h1 className={"text-xl text-center"}>{children}</h1>
 };
 
@@ -52,8 +52,9 @@ export const Accomplishments = ({accomplishments}: {accomplishments: React.JSX.E
         position: 'relative',
         top: 20
     }}>
-        {accomplishments.map(accomplishment => {
-            return <li style={{
+        {accomplishments?.map((accomplishment, index) => {
+            return <li key={index}
+                style={{
                 position: 'relative',
                 marginLeft: '20%',
                 marginRight: '20%',
@@ -247,12 +248,12 @@ export const PROFESSIONAL_SUMMARY = [
             heading={"Full Stack Developer"}
             duration={"January, 2023 - Current"}
             accomplishements={[
-                (<p>- Represented company's projects in multiple <Highlight>Conferences</Highlight> including <Highlight>ReAction, Higher Education Summit </Highlight>, and <Highlight>CiCan</Highlight></p>),
-                (<p>- Formulated <Highlight>Complex SQL Queries</Highlight> for improving the processing time from <Highlight>15-20mins to a few seconds</Highlight> by reducing DB calls and </p>),
-                (<p>- Helped identify, and solve problems with the <Highlight>ML algorithms</Highlight> producing results for <Highlight>Systematic Review platform (InsightScope)</Highlight> increasing the </p>),
-                (<p>- Created <Highlight>Patient Engagement Platform</Highlight> for <Highlight>CHEO (Children's Hospital of Eastern Ontario)</Highlight></p>),
-                (<p>- Solely responsible for creating a big feature for <Highlight>CCCTG (Canadian Care Trials Group)</Highlight> from Information Gathering to Deployment of the application.</p>),
-                (<p>- Worked closely with <Highlight>Researchers, and Doctors</Highlight> to constantly improve <Highlight>Systematic Review Platforms</Highlight> by performing multiple stress testings on the algorithms <Highlight>resulting in better outputs.</Highlight></p>),
+                (<p key={0}>- Represented company&apos;s projects in multiple <Highlight>Conferences</Highlight> including <Highlight>ReAction, Higher Education Summit </Highlight>, and <Highlight>CiCan</Highlight></p>),
+                (<p key={1}>- Formulated <Highlight>Complex SQL Queries</Highlight> for improving the processing time from <Highlight>15-20mins to a few seconds</Highlight> by reducing DB calls and </p>),
+                (<p key={2}>- Helped identify, and solve problems with the <Highlight>ML algorithms</Highlight> producing results for <Highlight>Systematic Review platform (InsightScope)</Highlight> increasing the </p>),
+                (<p key={3}>- Created <Highlight>Patient Engagement Platform</Highlight> for <Highlight>CHEO (Children&apos;s Hospital of Eastern Ontario)</Highlight></p>),
+                (<p key={4}>- Solely responsible for creating a big feature for <Highlight>CCCTG (Canadian Care Trials Group)</Highlight> from Information Gathering to Deployment of the application.</p>),
+                (<p key={5}>- Worked closely with <Highlight>Researchers, and Doctors</Highlight> to constantly improve <Highlight>Systematic Review Platforms</Highlight> by performing multiple stress testings on the algorithms <Highlight>resulting in better outputs.</Highlight></p>),
             ]} />
 
     },
@@ -263,13 +264,13 @@ export const PROFESSIONAL_SUMMARY = [
             heading={"Software Developer"}
             duration={"July, 2021 - September, 2022"}
             accomplishements={[
-                (<p>- Collaborated with <Highlight>product managers, UI/UX designers, and other developers</Highlight> to design, develop, and implement features based on technical specifications.</p>),
-                (<p>- Troubleshooted and resolved bugs within Spring Boot applications, ensuring smooth system operation.</p>),
-                (<p>- Led the successful <Highlight>migration of desktop applications to a cloud-based architecture</Highlight> using AWS, resulting in 62% reduction in infrastructure costs and increased scalability.</p>),
-                (<p>- Implemented <Highlight>Java-based Keycloak authentication</Highlight>, achieving a 70% performance improvement.</p>),
-                (<p>- Developed a <Highlight>user interaction tracking</Highlight> feature to <Highlight>analyze user behavior and inform product development decisions.</Highlight></p>),
-                (<p>- Led a team of 5 developers in delivering project on time and within budget.</p>),
-                (<p>- <Highlight>Optimized resource allocation and system performance</Highlight> by leveraging AWS Cloud technologies, leading to cost reduction and a 50% improvement in system performance.</p>)
+                (<p key={0}>- Collaborated with <Highlight>product managers, UI/UX designers, and other developers</Highlight> to design, develop, and implement features based on technical specifications.</p>),
+                (<p key={1}>- Troubleshooted and resolved bugs within Spring Boot applications, ensuring smooth system operation.</p>),
+                (<p key={2}>- Led the successful <Highlight>migration of desktop applications to a cloud-based architecture</Highlight> using AWS, resulting in 62% reduction in infrastructure costs and increased scalability.</p>),
+                (<p key={3}>- Implemented <Highlight>Java-based Keycloak authentication</Highlight>, achieving a 70% performance improvement.</p>),
+                (<p key={4}>- Developed a <Highlight>user interaction tracking</Highlight> feature to <Highlight>analyze user behavior and inform product development decisions.</Highlight></p>),
+                (<p key={5}>- Led a team of 5 developers in delivering project on time and within budget.</p>),
+                (<p key={6}>- <Highlight>Optimized resource allocation and system performance</Highlight> by leveraging AWS Cloud technologies, leading to cost reduction and a 50% improvement in system performance.</p>)
             ]} />
 
     },
@@ -280,11 +281,11 @@ export const PROFESSIONAL_SUMMARY = [
             heading={"Project Manager"}
             duration={"January, 2023 - May, 2023"}
             accomplishements={[
-                (<p>- Established and implemented <Highlight>quality assurance</Highlight> processes to ensure <Highlight>project deliverables meet quality standards and customer expectations.</Highlight></p>),
-                (<p>- Creating and managing <Highlight>project budgets, allocating resources efficiently, and monitoring expenditures</Highlight> to ensure projects are delivered within financial constraints.</p>),
-                (<p>- Identified, assessed, and mitigated <Highlight>project risks to minimize disruptions and ensure successful project delivery.</Highlight></p>),
-                (<p>- Led and motivated <Highlight>teams, delegating tasks, fostering collaboration, and ensuring effective communication</Highlight> among team members.</p>),
-                (<p>- Developed comprehensive <Highlight>project plans, defining scope, objectives, timelines, and resources</Highlight> required for successful project execution.</p>),
+                (<p key={0}>- Established and implemented <Highlight>quality assurance</Highlight> processes to ensure <Highlight>project deliverables meet quality standards and customer expectations.</Highlight></p>),
+                (<p key={1}>- Creating and managing <Highlight>project budgets, allocating resources efficiently, and monitoring expenditures</Highlight> to ensure projects are delivered within financial constraints.</p>),
+                (<p key={2}>- Identified, assessed, and mitigated <Highlight>project risks to minimize disruptions and ensure successful project delivery.</Highlight></p>),
+                (<p key={3}>- Led and motivated <Highlight>teams, delegating tasks, fostering collaboration, and ensuring effective communication</Highlight> among team members.</p>),
+                (<p key={4}>- Developed comprehensive <Highlight>project plans, defining scope, objectives, timelines, and resources</Highlight> required for successful project execution.</p>),
             ]} />
 
     },
@@ -295,12 +296,14 @@ export const PROFESSIONAL_SUMMARY = [
             heading={"Software Developer Intern"}
             duration={"January, 2021 - July, 2021"}
             accomplishements={[
-                (<p>- Learned and Developed <Highlight>backend APIs and application security</Highlight> focussing on <Highlight>quality, and optimized queries</Highlight> for faster data retrieving and transforming.</p>),
-                (<p>- Collaborated with frontend developers to <Highlight>design APIs</Highlight> facilitating seamless communication.</p>),
-                (<p>- Developed <Highlight>Streamlined Ordering System</Highlight> for the platform, <Highlight>optimizing database architecture and implementing secure authentication</Highlight> for enhanced user experience and scalability.</p>),
-                (<p>- Worked in an <Highlight>Early start-up environment</Highlight>, adeptly managing tight deadlines and high-pressure situations.</p>),
-                (<p>- Successfully documented backend system, <Highlight>facilitating seamless onboarding, enhancing code readability, and ensuring maintenance and troubleshooting</Highlight> of the platform.</p>),
+                (<p key={0}>- Learned and Developed <Highlight>backend APIs and application security</Highlight> focussing on <Highlight>quality, and optimized queries</Highlight> for faster data retrieving and transforming.</p>),
+                (<p key={1}>- Collaborated with frontend developers to <Highlight>design APIs</Highlight> facilitating seamless communication.</p>),
+                (<p key={2}>- Developed <Highlight>Streamlined Ordering System</Highlight> for the platform, <Highlight>optimizing database architecture and implementing secure authentication</Highlight> for enhanced user experience and scalability.</p>),
+                (<p key={3}>- Worked in an <Highlight>Early start-up environment</Highlight>, adeptly managing tight deadlines and high-pressure situations.</p>),
+                (<p key={4}>- Successfully documented backend system, <Highlight>facilitating seamless onboarding, enhancing code readability, and ensuring maintenance and troubleshooting</Highlight> of the platform.</p>),
             ]}/>
 
     },
 ];
+
+export default Duration;

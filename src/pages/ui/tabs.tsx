@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/pages/utils/cn";
+import cn from "@/pages/utils/cn";
 
 type Tab = {
     title: any;
@@ -10,7 +10,7 @@ type Tab = {
     content?: any;
 };
 
-export const Tabs = ({
+const Tabs = ({
                          tabs: propTabs,
                          containerClassName,
                          activeTabClassName,
@@ -23,9 +23,14 @@ export const Tabs = ({
     tabClassName?: string;
     contentClassName?: string;
 }) => {
-    const [active, setActive] = useState<Tab>(propTabs[0]);
+    const [active, setActive] = useState<Tab>({title: "", value: "", content: ""});
     const [tabs, setTabs] = useState<Tab[]>(propTabs);
 
+    useEffect(() => {
+        if (propTabs) {
+            setActive(propTabs[0])
+        }
+    }, []);
     const moveSelectedTabToTop = (idx: number) => {
         const newTabs = [...propTabs];
         const selectedTab = newTabs.splice(idx, 1);
@@ -47,7 +52,7 @@ export const Tabs = ({
                     margin: 50
                 }}
             >
-                {propTabs.map((tab, idx) => (
+                {propTabs?.map((tab, idx) => (
                     <button
                         key={tab.title}
                         onClick={() => {
@@ -108,7 +113,7 @@ export const FadeInDiv = ({
     };
     return (
         <div className="relative">
-            {tabs.map((tab, idx) => (
+            {tabs?.map((tab, idx) => (
                 <motion.div
                     key={tab.value}
                     layoutId={tab.value}
@@ -131,3 +136,5 @@ export const FadeInDiv = ({
         </div>
     );
 };
+
+export default Tabs;

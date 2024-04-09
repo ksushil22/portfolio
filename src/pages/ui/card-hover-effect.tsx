@@ -1,8 +1,8 @@
-import {cn} from "../utils/cn";
+import cn from "../utils/cn";
 import {AnimatePresence, motion} from "framer-motion";
 import {useState} from "react";
 
-export const HoverEffect = ({
+const HoverEffect = ({
                                 items,
                                 className,
                             }: {
@@ -21,7 +21,7 @@ export const HoverEffect = ({
                 className
             )}
         >
-            {items.map((item, idx) => (
+            {items?.map((item, idx) => (
                 <div
                     style={{
                         cursor: "pointer"
@@ -109,3 +109,5 @@ export const CardDescription = ({
         </p>
     );
 };
+
+export default HoverEffect;

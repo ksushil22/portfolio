@@ -1,13 +1,11 @@
-import {HeroParallax} from "@/pages/ui/hero-parallax";
+import HeroParallax from "@/pages/ui/hero-parallax";
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import {HoverEffect} from "@/pages/ui/card-hover-effect";
-import {TracingBeam} from "@/pages/ui/tracing-beam";
-import {cn} from "@/pages/utils/cn";
+import HoverEffect from "@/pages/ui/card-hover-effect";
+import TracingBeam from "@/pages/ui/tracing-beam";
 import React from "react";
-import {CardsSplitDelay} from "@/pages/ui/card-split";
-import {Tabs} from "@/pages/ui/tabs";
+import Tabs from "@/pages/ui/tabs";
 import {EDUCATION_CARDS, Highlight, PRODUCTS, PROFESSIONAL_SUMMARY, PROJECTS} from "@/pages/utils/constants";
-import Image from "next/image";
+import CardsSplitDelay from "@/pages/ui/card-split";
 
 
 export default function Home() {
@@ -25,7 +23,9 @@ export default function Home() {
                     }}>
                     <a href={"/Resume.pdf"} download={"Resume.pdf"}><Highlight>Download Resume</Highlight></a> |
                     <a href={"mailto:kainths.2206@gmail.com"}><Highlight>Get in touch!</Highlight></a>
-                    <a href={"https://www.linkedin.com/in/sushil-kainth/"} target={"_blank"}><img src={"/linkedin.svg"} width={50} height={50} alt={"linkedin"} /></a>
+                    <a href={"https://www.linkedin.com/in/sushil-kainth/"} target={"_blank"}><img src={"/linkedin.svg"}
+                                                                                                  width={50} height={50}
+                                                                                                  alt={"linkedin"}/></a>
 
                 </div>
 

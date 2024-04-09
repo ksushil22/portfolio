@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
-import { cn } from "../utils/cn";
+import cn from "../utils/cn";
 
-export const TracingBeam = ({
+const TracingBeam = ({
                                 children,
                                 className,
                             }: {
@@ -93,3 +93,5 @@ export const TracingBeam = ({
         </motion.div>
     );
 };
+
+export default TracingBeam;

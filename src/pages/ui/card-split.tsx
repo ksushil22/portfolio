@@ -3,13 +3,13 @@ import React, {useState, useRef, useEffect} from 'react';
 type Card = {
     institute: string;
     id: number;
-    name: string;
+    title: string;
     duration: string;
-    description: React.ReactNode;
+    description: any;
     background: string;
 };
 
-export const CardsSplitDelay = ({
+const CardsSplitDelay = ({
                               cards
                           }: {
     cards: Card[];
@@ -49,7 +49,7 @@ export const CardsSplitDelay = ({
             className={`items-center justify-center cards-split-delay ${transition ? 'transition' : ''}`}
             onClick={() => setTransition(!transition)}
         >
-            {cards.map((card, index) => {
+            {cards?.map((card, index) => {
                 return (
                     <li
                         key={card.id}
@@ -67,7 +67,7 @@ export const CardsSplitDelay = ({
                         </div>
                         <div>
                             <p className="text-neutral-500 font-medium">
-                                {card.name}
+                                {card.title}
                             </p>
                             <p className=" font-normal text-neutral-200">
                                 {card.duration}
@@ -82,3 +82,5 @@ export const CardsSplitDelay = ({
         </ul>
     );
 };
+
+export default CardsSplitDelay;
