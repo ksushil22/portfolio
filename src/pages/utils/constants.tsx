@@ -198,6 +198,11 @@ export const PROJECTS = [
         title: "Chess",
         description: "Created an online multiplayer chess game for a client. Has features like: Leaderboard, " +
             "Chess engine for detecting correct moves, chat, friend requests, and player invitations via email."
+    },
+    {
+        title: "Get Locals",
+        description: "Created a one solution for all the food business owners for website Generation, marketing, Search " +
+            "Engine Optimization, Ads, and more."
     }
 ];
 
