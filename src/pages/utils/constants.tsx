@@ -249,7 +249,7 @@ export const PROFESSIONAL_SUMMARY = [
             duration={"January, 2023 - Current"}
             accomplishements={[
                 (<p key={0}>- Represented company&apos;s projects in multiple <Highlight>Conferences</Highlight> including <Highlight>ReAction, Higher Education Summit </Highlight>, and <Highlight>CiCan</Highlight></p>),
-                (<p key={1}>- Formulated <Highlight>Complex SQL Queries</Highlight> for improving the processing time from <Highlight>15-20mins to a few seconds</Highlight> by reducing DB calls and </p>),
+                (<p key={1}>- Formulated <Highlight>Complex SQL Queries</Highlight> for improving the processing time from <Highlight>15-20mins to a few seconds</Highlight> by reducing DB calls and improved loading time.</p>),
                 (<p key={2}>- Helped identify, and solve problems with the <Highlight>ML algorithms</Highlight> producing results for <Highlight>Systematic Review platform (InsightScope)</Highlight> increasing the </p>),
                 (<p key={3}>- Created <Highlight>Patient Engagement Platform</Highlight> for <Highlight>CHEO (Children&apos;s Hospital of Eastern Ontario)</Highlight></p>),
                 (<p key={4}>- Solely responsible for creating a big feature for <Highlight>CCCTG (Canadian Care Trials Group)</Highlight> from Information Gathering to Deployment of the application.</p>),
@@ -297,10 +297,11 @@ export const PROFESSIONAL_SUMMARY = [
             duration={"January, 2021 - July, 2021"}
             accomplishements={[
                 (<p key={0}>- Learned and Developed <Highlight>backend APIs and application security</Highlight> focussing on <Highlight>quality, and optimized queries</Highlight> for faster data retrieving and transforming.</p>),
-                (<p key={1}>- Collaborated with frontend developers to <Highlight>design APIs</Highlight> facilitating seamless communication.</p>),
+                (<p key={1}>- Developed an <Highlight>Angular 10 based rendering system</Highlight> that dynamically generates forms from JSON, reducing static form code by 20% and improving production speed by 15%.</p>),
                 (<p key={2}>- Developed <Highlight>Streamlined Ordering System</Highlight> for the platform, <Highlight>optimizing database architecture and implementing secure authentication</Highlight> for enhanced user experience and scalability.</p>),
-                (<p key={3}>- Worked in an <Highlight>Early start-up environment</Highlight>, adeptly managing tight deadlines and high-pressure situations.</p>),
+                (<p key={3}>- Integrated <Highlight>OAuth 2.0 with Spring</Highlight> to enable secure and <Highlight>seamless authentication</Highlight>, boosting user adoption by 10% through enhanced functionality and improved security features.</p>),
                 (<p key={4}>- Successfully documented backend system, <Highlight>facilitating seamless onboarding, enhancing code readability, and ensuring maintenance and troubleshooting</Highlight> of the platform.</p>),
+                (<p key={5}>- Implemented <Highlight>multi-tenant authentication</Highlight> across multiple applications, enabling the company to <Highlight>efficiently manage over 50 clients simultaneously</Highlight>, improving organizational capability by 30%.</p>),
             ]}/>
 
     },

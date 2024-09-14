@@ -66,7 +66,6 @@ const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className=""
             >
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
                     {firstRow?.map((product) => (
@@ -103,7 +102,7 @@ const HeroParallax = ({
 export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-            <h1 className={`text-7xl md:text-7xl sm:text-7xl text-white`}>
+            <h1 className={`text-7xl md:text-7xl sm:text-7xl`}>
                 Sushil Kainth
             </h1>
             <p className={"text-2xl"}>

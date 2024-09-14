@@ -1,5 +1,3 @@
-"use client";
-
 import React, {useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import cn from "@/pages/utils/cn";
@@ -70,13 +68,13 @@ const Tabs = ({
                                 layoutId="clickedbutton"
                                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                                 className={cn(
-                                    "absolute inset-0 bg-zinc-800 rounded-full ",
+                                    "absolute inset-0 bg-zinc-800 rounded-full text-white",
                                     activeTabClassName
                                 )}
                             />
                         )}
 
-                        <span className="relative block text-white"
+                        <span className="relative block"
                               style={{
                                   transition: 'all 0.5s ease'
                               }}
