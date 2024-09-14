@@ -35,7 +35,7 @@ export default function Home() {
                         <Highlight>Download Resume</Highlight>
                     </a>
                     |
-                    <a href={"mailto:kainths.2206@gmail.com"}>
+                    <a href={"mailto:skainth.2206@gmail.com"}>
                         <Highlight>Get in touch!</Highlight>
                     </a>
                     <a href={"https://www.linkedin.com/in/sushil-kainth/"} target={"_blank"}>
