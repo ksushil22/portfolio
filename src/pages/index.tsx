@@ -31,7 +31,7 @@ export default function Home() {
                         display: 'flex',
                         alignItems: 'center'
                     }}>
-                    <a href={"/Resume.pdf"} download={"Resume-Sushil.pdf"}>
+                    <a href={"/Resume.pdf"} download={"Resume_Sushil_Kainth.pdf"}>
                         <Highlight>Download Resume</Highlight>
                     </a>
                     |
