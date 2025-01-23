@@ -251,7 +251,7 @@ export const PROFESSIONAL_SUMMARY = [
         value: 0,
         content: <Experience
             heading={"Full Stack Developer"}
-            duration={"January, 2023 - Current"}
+            duration={"January, 2023 - October, 2024"}
             accomplishements={[
                 (<p key={0}>- Represented company&apos;s projects in multiple <Highlight>Conferences</Highlight> including <Highlight>ReAction, Higher Education Summit </Highlight>, and <Highlight>CiCan</Highlight></p>),
                 (<p key={1}>- Formulated <Highlight>Complex SQL Queries</Highlight> for improving the processing time from <Highlight>15-20mins to a few seconds</Highlight> by reducing DB calls and improved loading time.</p>),
