@@ -20,6 +20,13 @@ export const Highlight = ({
     );
 };
 
+export const CustomHeading = ({
+    children
+}: {
+    children: React.ReactNode;}) => {
+    return <h1 className={"text-center text-7xl top-0 font-bold text-emerald-700"}>{children}</h1>
+}
+
 const Experience = ({
     heading,
     duration,
