@@ -9,6 +9,7 @@ const HoverEffect = ({
     items: {
         title: string;
         description: string;
+        url: string
     }[];
     className?: string;
 }) => {
@@ -48,7 +49,7 @@ const HoverEffect = ({
                             />
                         )}
                     </AnimatePresence>
-                    <Card>
+                    <Card url={item.url}>
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>{item.description}</CardDescription>
                     </Card>
@@ -61,9 +62,11 @@ const HoverEffect = ({
 export const Card = ({
                          className,
                          children,
+                         url
                      }: {
     className?: string;
     children: React.ReactNode;
+    url: string
 }) => {
     return (
         <div
@@ -71,6 +74,7 @@ export const Card = ({
                 "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
                 className
             )}
+            onClick={()=> url != "" ? window.open(url, "_blank"): ""}
         >
             <div className="relative z-50">
                 <div className="p-4">{children}</div>

@@ -161,48 +161,57 @@ export const PRODUCTS = [
 
 export const PROJECTS = [
     {
-        title: "Dough Me A flavour",
-        description: "E-Commerce website for a bakery shop. Used ReactJs, Spring, Bootstrap, SQL. Functionality includes" +
-            ": Ordering, Cart, Live product count, and Reviews"
+        title: "Get Locals",
+        description: "Created a one solution for all the food business owners for website Generation, marketing, Search " +
+            "Engine Optimization, Ads, and more.",
+        url: "https://github.com/Get-Locals"
     },
     {
         title: "Размещения (Placement)",
         description: "A placement platform for the university to post about the upcoming placement drives and students to " +
-            "discuss about the opportunity with each other and with professors."
-    },
-    {
-        title: "Smart Switch",
-        description: "A smart switch made using IOT with webapp to switch button over LAN. Could be accessed by" +
-            " anyone on the network. Shows the current status of the switches at home."
-    },
-    {
-        title: "Smart Face Detection System",
-        description: "Smart face detection system that uses Reinforcement Learning and Computer vision" +
-            "to automatically adjust and save the camera's properties according to the environment"
-    },
-    {
-        title: 'News Bot',
-        description: "Trained bot to reply to questions related to news with 5M+ dataset. Acted just like ChatGPT but, with " +
-            "less data."
-    },
-    {
-        title: "Smart Bot",
-        description: "Used ROS(Robot operation System), and iCreate3 robot. Trained the robot to roam freely in a closed " +
-            "area drawn using a marker."
+            "discuss about the opportunity with each other and with professors.",
+        url: "https://github.com/ksushil22/Placement"
     },
     {
         title: "Portfolio",
-        description: "The Website that you are enjoying. Used NextJS. Try to interact with every component."
+        description: "The Website that you are enjoying. Used NextJS. Try to interact with every component.",
+        url: "https://github.com/ksushil22/portfolio"
     },
     {
         title: "Chess",
         description: "Created an online multiplayer chess game for a client. Has features like: Leaderboard, " +
-            "Chess engine for detecting correct moves, chat, friend requests, and player invitations via email."
+            "Chess engine for detecting correct moves, chat, friend requests, and player invitations via email.",
+        url: ""
     },
     {
-        title: "Get Locals",
-        description: "Created a one solution for all the food business owners for website Generation, marketing, Search " +
-            "Engine Optimization, Ads, and more."
+        title: "Dough Me A flavour",
+        description: "E-Commerce website for a bakery shop. Used ReactJs, Spring, Bootstrap, SQL. Functionality includes" +
+            ": Ordering, Cart, Live product count, and Reviews",
+        url: ""
+    },
+    {
+        title: "Smart Switch",
+        description: "A smart switch made using IOT with webapp to switch button over LAN. Could be accessed by" +
+            " anyone on the network. Shows the current status of the switches at home.",
+        url: ""
+    },
+    {
+        title: "Smart Face Detection System",
+        description: "Smart face detection system that uses Reinforcement Learning and Computer vision" +
+            "to automatically adjust and save the camera's properties according to the environment",
+        url: ""
+    },
+    {
+        title: 'News Bot',
+        description: "Trained bot to reply to questions related to news with 5M+ dataset. Acted just like ChatGPT but, with " +
+            "less data.",
+        url: ""
+    },
+    {
+        title: "Smart Bot",
+        description: "Used ROS(Robot operation System), and iCreate3 robot. Trained the robot to roam freely in a closed " +
+            "area drawn using a marker.",
+        url: ""
     }
 ];
 
