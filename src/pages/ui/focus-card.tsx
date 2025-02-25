@@ -73,6 +73,8 @@ export const Card = React.memo(
     }
 );
 
+Card.displayName = "Card";
+
 // FocusCards component
 const FocusCards = () => {
     return (
