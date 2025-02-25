@@ -1,18 +1,12 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import HeroParallax from "@/pages/ui/hero-parallax";
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import HoverEffect from "@/pages/ui/card-hover-effect";
-import TracingBeam from "@/pages/ui/tracing-beam";
-import Tabs from "@/pages/ui/tabs";
-import {
-    CustomHeading,
-    EDUCATION_CARDS,
-    Highlight,
-    PRODUCTS,
-    PROFESSIONAL_SUMMARY,
-    PROJECTS
-} from "@/pages/utils/constants";
-import CardsSplitDelay from "@/pages/ui/card-split";
+import {CustomHeading, EDUCATION_CARDS, Highlight, PRODUCTS, PROJECTS} from "@/pages/utils/constants";
+import {Grid} from "antd";
+import FocusCards from "@/pages/ui/focus-card";
+import ExpandableCards from "@/pages/ui/expandable-cards";
+import Image from "next/image";
+
 
 export default function Home() {
     // Force dark mode on mount
@@ -27,47 +21,49 @@ export default function Home() {
     }, []);
 
     return (
-        <PerfectScrollbar options={{ minScrollbarLength: 100 }}>
-            <TracingBeam className={"z-50"}>
-                <div
-                    style={{
-                        position: "absolute",
-                        top: 20,
-                        right: 20,
-                        zIndex: 2,
-                        display: 'flex',
-                        alignItems: 'center'
-                    }}>
-                    <a href={"/Resume.pdf"} download={"Resume_Sushil_Kainth.pdf"}>
-                        <Highlight>Download Resume</Highlight>
-                    </a>
-                    |
-                    <a href={"mailto:kainths.jobs@gmail.com"}>
-                        <Highlight>Get in touch!</Highlight>
-                    </a>
-                    <a href={"https://www.linkedin.com/in/sushil-kainth/"} target={"_blank"}>
-                        <img src={"/linkedin.svg"} width={50} height={50} alt={"linkedin"} />
-                    </a>
+        <>
+            <div
+                style={{
+                    position: "absolute",
+                    top: 20,
+                    right: 20,
+                    zIndex: 2,
+                    display: 'flex',
+                    alignItems: 'center'
+                }}>
+                <a href={"/Resume.pdf"} download={"Resume_Sushil_Kainth.pdf"}>
+                    <Highlight>Download Resume</Highlight>
+                </a>
+                |
+                <a href={"mailto:kainths.jobs@gmail.com"}>
+                    <Highlight>Get in touch!</Highlight>
+                </a>
+                <a href={"https://www.linkedin.com/in/sushil-kainth/"} target={"_blank"}>
+                    <Image src={"/linkedin.svg"} width={50} height={50} alt={"linkedin"}/>
+                </a>
+            </div>
+            <div className={"antialiased"}>
+                <HeroParallax products={PRODUCTS}/>
+            </div>
+            <div className="items-center w-full education"
+                 style={{
+                     marginTop: 250
+                 }}>
+                <CustomHeading>Education</CustomHeading>
+                <div style={{marginTop: 50}}>
+                    <FocusCards/>
                 </div>
-
-                <div className={"no-visible-scrollbar antialiased"}>
-                    <HeroParallax products={PRODUCTS} />
+            </div>
+            <div style={{marginTop: 50}}>
+                <CustomHeading>Professional Summary</CustomHeading>
+                <div style={{marginTop: 50}}>
+                    <ExpandableCards/>
                 </div>
-                <div className="h-[100vh] items-center w-full education">
-                    <CustomHeading>Education</CustomHeading>
-                    <div style={{ marginTop: 250 }}>
-                        <CardsSplitDelay cards={EDUCATION_CARDS} />
-                    </div>
-                </div>
-                <div className={'min-h-[120vh]'}>
-                    <CustomHeading>Professional Summary</CustomHeading>
-                    <Tabs tabs={PROFESSIONAL_SUMMARY} />
-                </div>
+            </div>
+            <div className="max-w-5xl mx-auto px-8 m-[30px]">
                 <CustomHeading>Projects</CustomHeading>
-                <div className="max-w-5xl mx-auto px-8 m-[30px]">
-                    <HoverEffect items={PROJECTS} />
-                </div>
-            </TracingBeam>
-        </PerfectScrollbar>
+                <HoverEffect items={PROJECTS}/>
+            </div>
+        </>
     );
 }

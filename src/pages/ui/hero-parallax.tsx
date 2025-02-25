@@ -8,6 +8,10 @@ import {
     MotionValue,
 } from "framer-motion";
 import {Highlight} from "@/pages/utils/constants";
+import {Grid} from "antd";
+import Image from "next/image";
+
+const {useBreakpoint} = Grid;
 
 
 const HeroParallax = ({
@@ -56,7 +60,7 @@ const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[250vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[full] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -67,7 +71,7 @@ const HeroParallax = ({
                     opacity,
                 }}
             >
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+                <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 md:space-x-20 mb-10 md:mb-20">
                     {firstRow?.map((product) => (
                         <ProductCard
                             product={product}
@@ -76,7 +80,7 @@ const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row  mb-20 space-x-20 ">
+                <motion.div className="flex flex-row mb-10 md:mb-20 space-x-4 md:space-x-20">
                     {secondRow?.map((product) => (
                         <ProductCard
                             product={product}
@@ -85,7 +89,7 @@ const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+                <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 md:space-x-20">
                     {thirdRow?.map((product) => (
                         <ProductCard
                             product={product}
@@ -100,15 +104,23 @@ const HeroParallax = ({
 };
 
 export const Header = () => {
+    const screen = useBreakpoint();
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-            <h1 className={`text-7xl md:text-7xl sm:text-7xl`}>
-                Sushil Kainth
-            </h1>
-            <p className={"text-2xl"}>
-                <span className="text_1"><Highlight>Software Engineer</Highlight> | Building Solutions with AI & Cloud</span>
-                <span className="text_2"><Highlight>Results-Oriented Developer</Highlight> | Delivering Efficiency & Innovation</span>
-            </p>
+        <div className="max-w-7xl relative mx-auto py-10 md:py-20 px-4 w-full">
+            <h1 className="text-7xl md:text-7xl mt-[200px] md:mt-0">Sushil Kainth</h1>
+            {screen.md ?
+                <p className="text-lg md:text-2xl">
+                    <span className="text_1">
+                      <Highlight>Software Engineer</Highlight> | Building Solutions with
+                      AI & Cloud
+                    </span>
+                    <br/>
+                    <span className="text_2">
+                      <Highlight>Results-Oriented Developer</Highlight> | Delivering
+                      Efficiency & Innovation
+                    </span>
+                </p> : " "
+            }
         </div>
     );
 };
@@ -125,28 +137,20 @@ export const ProductCard = ({
 }) => {
     return (
         <motion.div
-            style={{
-                x: translate,
-            }}
-            whileHover={{
-                y: -20,
-                scale: 1.1
-            }}
-            key={product.title}
-            className="group/product h-50 w-[30rem] relative flex-shrink-0"
+            style={{x: translate}}
+            whileHover={{y: -10, scale: 1.05}}
+            className="group/product relative flex-shrink-0 w-[90%] sm:w-[300px]"
         >
-            <h2 className="absolute top-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+            <h2 className="absolute top-4 left-4 opacity-0 group-hover/product:opacity-100 text-white z-10">
                 {product.title}
             </h2>
-            <img
-                src={product.thumbnail}
-                style={{
-                    width: 300,
-                    height: 300,
-                    overflow: 'hidden'
-                }}
-                alt={product.title}
-            />
+            <div className="aspect-square overflow-hidden">
+                <Image
+                    src={product.thumbnail}
+                    className="w-full h-full object-contain"
+                    alt={product.title}
+                />
+            </div>
         </motion.div>
     );
 };
