@@ -6,6 +6,7 @@ import {Grid} from "antd";
 import FocusCards from "@/pages/ui/focus-card";
 import ExpandableCards from "@/pages/ui/expandable-cards";
 import Image from "next/image";
+import {Analytics} from "@vercel/analytics/react";
 
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
 
     return (
         <>
+
+            <Analytics />
             <div
                 style={{
                     position: "absolute",
