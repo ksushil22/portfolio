@@ -34,7 +34,7 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center'
                 }}>
-                <a href={"/Resume.pdf"} download={"Resume_Sushil_Kainth.pdf"}>
+                <a href={"https://drive.google.com/file/d/111svMn2TURkO2uKCEcED0nt3Ph5lji4w/view?usp=sharing"}>
                     <Highlight>Download Resume</Highlight>
                 </a>
                 |
